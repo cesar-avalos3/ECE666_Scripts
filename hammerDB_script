@@ -1,0 +1,11 @@
+#!/usr/bin/tclsh
+dbset db pg
+dbset bm TPC-C
+diset tpcc pg_pass password
+diset tpcc pg_user sbtest
+diset tpcc pg_superuserpass password
+diset tpcc pg_total_iterations 100
+diset tpcc pg_num_vu 4
+buildschema
+vurun
+waittocomplete
